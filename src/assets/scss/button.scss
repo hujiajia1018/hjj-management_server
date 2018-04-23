@@ -1,0 +1,252 @@
+@mixin boxShadow($color: rgba(0, 0, 0, 0.12)) {
+  &:hover {
+    box-shadow: 0 2px 4px $color;
+  }
+}
+
+.el-button__fix:last-child {
+  &::after {
+    background-color: transparent;
+  }
+}
+
+/*绿色按钮*/
+.panel-header-btn__associate{
+  display: flex;
+  width: 140px;
+  padding: 0 10px;
+  height: 35px;
+  box-sizing: border-box;
+  background-color: #7ED321;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 3px;
+  font-size: 17px;
+  transition: .3s;
+  color: #fff;
+  cursor: pointer;
+  @include boxShadow();
+  .icon-create {
+    margin-right: 10px;
+    transition: .3s;
+  }
+  &:active {
+    background-color: darken(#7ED321,10%);
+  }
+  &:hover {
+    .icon-create {
+      transform: rotateZ(90deg);
+    }
+  }
+}
+
+// 下载
+.panel-btn__download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 172px;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 17px;
+  color: #fff;
+  cursor: pointer;
+  @include boxShadow();
+  .icon-download {
+    margin-right: 5px;
+  }
+  &:first-child {
+    margin-right: 20px;
+  }
+}
+
+.panel-btn__download_detail {
+  background-color: #7ED321;
+  &:hover,&:active {
+    background-color: darken(#7ED321, 10%);
+  }
+}
+
+// 提示信息确定按钮
+.el-message-box__btns {
+    .el-button--primary {
+      background-color: #7ED321;
+      border: none;
+      &:hover,&:active {
+        background-color: darken(#7ED321, 10%);
+      }
+    }
+}
+
+/*白色按钮*/
+
+.panel-header-btn-group {
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  @at-root {
+    .panel-header-btn {
+      float: left;
+      width: 80px;
+      padding: 0 10px;
+      height: 35px;
+      border: 1px solid #FE9B20;
+      border-radius: 3px;
+      text-align: center;
+      line-height: 35px;
+      font-size: 17px;
+      cursor: pointer;
+      color: #FE9B20;
+      background-color: #FEFDFB;
+      &:hover,&:active{
+        background-color: darken(#FEFDFB, 10%);
+      }
+    }
+    .panel-header-btn__fill {
+      margin-right: 15px;
+      color: #fff;
+      background-color: #FE9B20;
+      &:hover,&:active {
+        background-color: darken(#FE9B20, 10%);
+      }
+    }
+    .transctl-btn {
+      background-color: #fff;
+      &:hover,&:active{
+        background-color: darken(#fff, 10%);
+      }
+    }
+  }
+}
+
+/*黄色按钮*/
+
+// 下载
+.panel-btn__download_record {
+  background-color: #FE9B20;
+  &:hover,&:active {
+    background-color: darken(#FE9B20, 10%);
+  }
+}
+
+
+// 获取验证码
+.yanz {
+  display: flex;
+  .el-form-item {
+    flex: auto;
+  }
+  .panel-header-btn__fill.panel-header-btn {
+    width: 100px;
+    margin: 0;
+    padding: 0;
+    margin-left: 2px;
+    font-size: 15px;
+  }
+  .send {
+    background: #cecaca;
+    border: none;
+    color: #9c9a9a;
+    cursor: not-allowed;
+  }
+}
+
+// dropdown样式
+.el-button__fix {
+  position: relative;
+  font-size: 15px;
+  border-radius: 0px;
+  margin-right: 15px;
+  @at-root .el-dropdown-link__fix {
+    font-size: 15px;
+    color: #FE9B20;
+    cursor: pointer;
+  }
+  &::after {
+    position: absolute;
+    content: '';
+    height: 15px;
+    right: -10px;
+    width: 1px;
+    background-color: #FE9B20;
+  }
+}
+// 下拉框按钮样式
+.el-dropdown-menu__fix {
+  padding: 0px;
+  border: 1px solid #E8E7E6;
+  color: #FE9B20;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  @at-root .el-dropdown-item__fix {
+    line-height: 32px;
+    padding: 0px 8px;
+    text-align: center;
+    font-size: 15px;
+    &:not(last-of-child) {
+      border-bottom: 1px solid #E8E7E6;
+    }
+  }
+}
+
+// 日语下自适应宽度按钮
+div.banner-btn-ja {
+  width: auto;
+  max-width: 250px;
+}
+
+// 打分自定义样式
+.myRate {
+  .el-rate-off, .el-icon-star-on:before {
+    border: 1px solid #FE9B20;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+  .el-icon-star-on:before {
+    content: '';
+    cursor: not-allowed;
+  }
+
+  .el-rate {
+    height: 32px;
+    line-height: 32px;
+
+    .el-rate__icon {
+      margin-right: 20px;
+      vertical-align: middle;
+    }
+  }
+
+  .el-rate__text {
+    font-size: 24px;
+  }
+
+  .el-rate-on {
+    border: 1px solid #FE9B20;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #FE9B20;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+
+}
+
+// 下拉 白色
+.el-dropdown-menu {
+  a {
+    background: transparent;
+    color: #262323;
+  }
+}

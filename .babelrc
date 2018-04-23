@@ -1,0 +1,13 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "stage-2"
+  ],
+  "plugins": [["component", [
+    {
+      "libraryName": "qfpay-element-ui",
+      "styleLibraryName": "~theme"
+    }
+  ]]],
+  "comments": false
+}

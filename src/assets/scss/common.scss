@@ -1,0 +1,167 @@
+@import "dialog";
+@import "button";
+@import "element";
+
+@font-face {
+  font-family: 'myicon';
+  src:  url('../fonts/myicon.eot');
+  src:  url('../fonts/myicon.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/myicon.ttf') format('truetype'),
+  url('../fonts/myicon.woff') format('woff'),
+  url('../fonts/myicon.svg?#myicon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'myicon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-create:before {
+  content: "\e900";
+}
+.icon-down_arrow:before {
+  content: "\e901";
+}
+.icon-ic_logout:before {
+  content: "\e902";
+}
+.icon-right_arrow:before {
+  content: "\e903";
+}
+.icon-download:before {
+  content: "\e904";
+}
+
+html {
+  background: #f7f7f7;
+}
+body, html {
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"]{
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+}
+
+// 去掉自动填充颜色
+input:-webkit-autofill { box-shadow: 0 0 0px 1000px white inset !important;}
+
+// 没有内容展示
+.no-content {
+  text-align: center;
+  font-size: 18px;
+  color:#8A8C92;
+  padding: 20px 0;
+}
+
+// loading状态提示
+.el-icon-loading{
+  margin-right: 0;
+}
+
+// 时分秒选择控件
+.el-form-item__content {
+  .el-date-editor--datetimerange {
+    .el-icon-time {
+      display: none;
+    }
+    // 宽度
+    .el-input__inner {
+      width: 310px !important;
+      padding: 3px 10px;
+    }
+  }
+}
+.el-picker-panel__link-btn {
+  display: none;
+}
+
+// 对话框messagebox
+.el-message-box__wrapper {
+  .el-message-box__headerbtn {
+    padding: 0;
+    border: none;
+  }
+}
+
+.flex .info-desc__wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+// 英文换行处理
+.desc, .info-desc {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+// 说明文字样式
+.gray-explain {
+  color: #8A8C92;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.black-explain {
+  color: #262424;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+.explain {
+  .el-form-item__content {
+    display: inline-block;
+    background: rgba(254, 155, 32,0.1);
+    padding: 10px 20px 10px 10px;
+
+    .el-checkbox {
+      margin: 0;
+      .el-checkbox__label {
+        color: #262424;
+        font-size: 16px;
+      }
+    }
+
+    .content {
+      font-size: 12px;
+      color: #8A8C92;
+      height: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+// 下拉框换行样式
+.el-select .el-tag {
+  height: auto;
+  .el-select__tags-text {
+    height: 24px;
+    line-height: 24px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+}
+

@@ -1,0 +1,90 @@
+.el-table {
+  border: none;
+  &::after {
+    background-color: transparent;
+  }
+}
+
+.el-table th.is-leaf  {
+  border-bottom: none;
+  border-right: 1px solid #fff;
+  background-color: #F7F7F7;
+  .cell {
+    color: #777A7D;
+  }
+}
+
+.el-table__header-wrapper thead div {
+  background-color: transparent;
+}
+
+.el-input__inner {
+  border: 1px solid #c2c2c2;
+  &::-webkit-input-placeholder {
+    color: #A7A9AE;
+  }
+  &::-moz-placeholder {
+    color: #A7A9AE;
+  }
+}
+
+.el-select .el-input .el-input__icon {
+  color: #C2C2C2;
+}
+
+.el-pager li {
+  width: 32px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 4px;
+  &:hover {
+    color: lighten(#FE9B20, 10%);
+  }
+  &.active {
+    color: #000;
+    background-color: #F1F3F5;
+  }
+  border: none;
+  color: #FE9B20;
+  &:last-child {
+    border-right: none;
+  }
+}
+.el-pagination  {
+  .btn-prev {
+    border: none;
+  }
+  .btn-next {
+    border: none;
+  }
+}
+.el-button+.el-button {
+  margin-left: 0px;
+}
+
+.el-table .cell {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.el-breadcrumb {
+  font-size: 18px;
+  .el-breadcrumb__item__inner {
+    color: #262424;
+  }
+  .el-breadcrumb__item__inner:hover {
+    color: #FE9B20;
+  }
+
+  .el-breadcrumb__item:not(.first):first-child .el-breadcrumb__item__inner,
+  .el-breadcrumb__item:not(.first):first-child .el-breadcrumb__item__inner:hover {
+    color: #beb297;
+    cursor: text;
+  }
+
+}

@@ -1,0 +1,118 @@
+.el-dialog__wrapper {
+  .mydialog {
+    width: 420px;
+  }
+  .haiwiadialog {
+    width: 490px;
+  }
+}
+.el-dialog__headerbtn {
+  border: none;
+}
+.mydialog {
+  .el-dialog {
+    width: 500px;
+  }
+  .el-dialog__header {
+    text-align: center;
+  }
+  .el-dialog__title {
+    line-height: 1.2;
+    font-size: 20px;
+    color: #262323;
+  }
+  .el-dialog__body {
+    padding: 15px 30px 0px;
+  }
+  .desc {
+    line-height: 1.5;
+    font-size: 16px;
+    color: #262323;
+    margin-bottom: 20px;
+  }
+  .el-form-item {
+    margin-bottom: 20px;
+  }
+  .el-input__inner {
+    height: 36px;
+  }
+  .el-form-item__label {
+    font-size: 15px;
+    padding: 0px;
+    text-align: left;
+    line-height: 36px;
+    color: #262323;
+    flex-shrink: 0;
+  }
+  .el-dialog__footer {
+    padding: 20px 30px;
+    .dialog-footer {
+      display: flex;
+      justify-content: flex-end;
+      div {
+        width: 100px;
+        height: 36px;
+        text-align: center;
+        line-height: 36px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+    .cancel {
+      margin-right: 20px;
+      border: 1px solid #FE9B20;
+      color: #FE9B20;
+      &:hover,&:active {
+        background-color: darken(#fff, 10%);
+      }
+    }
+    .submit {
+      background-color: #7ED321;
+      color: #fff;
+      &:hover,&:active {
+        background-color: darken(#7ED321, 10%);
+      }
+      @at-root .el-icon-loading {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .total-footer {
+    .separate {
+      background-color: #FE9B20;
+      color: #fff;
+      margin-right: 20px;
+      &:hover,&:active {
+        background-color: darken(#FE9B20, 10%);
+      }
+    }
+  }
+}
+
+.changepwd {
+  .el-form-item__error {
+    white-space: nowrap;
+  }
+}
+.extra {
+  .el-dialog__header {
+    text-align: left;
+    padding-left: 30px;
+  }
+}
+
+.haiwiadialog {
+  .el-form-item {
+    display: flex;
+    align-items: center;
+  }
+  .el-form-item__label {
+    line-height: 1.4;
+  }
+  .el-form-item__content {
+    margin-left: 20px !important;
+    flex: 1;
+  }
+}
